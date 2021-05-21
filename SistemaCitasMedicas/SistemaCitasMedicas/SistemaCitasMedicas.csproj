@@ -97,19 +97,63 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Source\css\bootstrap-grid.css" />
+    <Content Include="Source\css\bootstrap-grid.min.css" />
+    <Content Include="Source\css\bootstrap-reboot.css" />
+    <Content Include="Source\css\bootstrap-reboot.min.css" />
+    <Content Include="Source\css\bootstrap.css" />
+    <Content Include="Source\css\bootstrap.min.css" />
+    <Content Include="Source\js\bootstrap.js" />
+    <Content Include="Source\js\bootstrap.min.js" />
+    <Content Include="Source\js\jquery-3.6.0.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EspecialistaController.cs" />
+    <Compile Include="Controllers\HorarioAtencionController.cs" />
+    <Compile Include="Controllers\LoginAdministradorController.cs" />
+    <Compile Include="Controllers\LoginEspecialistaController.cs" />
+    <Compile Include="Controllers\LoginUsuarioController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Calificacion.cs" />
+    <Compile Include="Models\Cita.cs" />
+    <Compile Include="Models\DatosClinica.cs" />
+    <Compile Include="Models\DetalleCita.cs" />
+    <Compile Include="Models\Especialista.cs" />
+    <Compile Include="Models\HistorialDoctor.cs" />
+    <Compile Include="Models\HistorialUsuario.cs" />
+    <Compile Include="Models\HorarioAtencion.cs" />
+    <Compile Include="Models\HorarioAtencionDetalle.cs" />
+    <Compile Include="Models\HorarioAtencionDia.cs" />
+    <Compile Include="Models\RecetaMedica.cs" />
+    <Compile Include="Models\RecetaMedicaDetalle.cs" />
     <Compile Include="Models\ReservaCita.cs" />
+    <Compile Include="Models\TipoEspecialista.cs" />
+    <Compile Include="Models\TipoUsuario.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Especialista\Index.cshtml" />
+    <Content Include="Views\Especialista\Visualizar.cshtml" />
+    <Content Include="Views\Especialista\AgregarEditar.cshtml" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\_Viewstart.cshtml" />
+    <Content Include="Views\HorarioAtencion\Index.cshtml" />
+    <Content Include="Views\HorarioAtencion\Visualizar.cshtml" />
+    <Content Include="Views\HorarioAtencion\AgregarEditar.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\Visualizar.cshtml" />
+    <Content Include="Views\Usuario\AgregarEditar.cshtml" />
+    <Content Include="Views\LoginUsuario\Index.cshtml" />
+    <Content Include="Views\LoginEspecialista\Index.cshtml" />
+    <Content Include="Views\LoginAdministrador\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,7 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,53 @@
+﻿@model List<SistemaCitasMedicas.Models.Usuario>
+@{ // Layout = null;
+                ViewBag.Title = "Index"; }
+
+<h2 class="card-header">
+    <a href="~/Usuario/AgregarEditar/" class="btn btn-info float-right"> Nuevo Usuarioooo </a>
+</h2>
+
+@using (Html.BeginForm("Index", "Usuario", FormMethod.Post, new { usuario = "frm-usuario" }))
+{
+<div class="text-left">
+    @Html.Label("Buscar:")
+    @Html.TextBox("criterio")
+    <button type="submit" class="btn btn-secondary">Buscar</button>
+</div>}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TIPO DE USUARIO</th>
+            <th>DNI</th>
+            <th>NOMBRE Y APELLIDO</th>
+            <th>TELEFONO</th>
+            <th>CORRERO</th>
+            <th>CONTRASEÑA</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+<tr>
+    <td>@(m.usuario_id)</td>
+    <td>@(m.tipoUsuario_id) </td>
+    <td>@(m.dni)</td>
+    <td>@(m.nombre), @(m.apellido)</td>
+    <td>@(m.telefono)</td>
+    <td>@(m.correo)</td>
+    <td>@(m.contrasenia)</td>
+
+
+    <td style="align-content:center; ">
+        <a href="~/Usuario/Visualizar/@m.usuario_id" class="btn btn-warning">DETALLE</a>
+        <a href="~/Usuario/AgregarEditar/@m.usuario_id" class="btn btn-primary">MODIFICAR</a>
+        <a href="~/Usuario/Eliminar/@m.usuario_id" class="btn btn-danger" onclick="return confirm('¿Estás seguro de eliminar elemento?'); ">ELIMINAR</a>
+
+    </td>
+</tr>}
+    </tbody>
+</table>
+<br />
+<br />
+<br />

@@ -1,0 +1,17 @@
+﻿@model SistemaCitasMedicas.Controllers.LoginEspecialistaController
+@{ // Layout = null;
+    ViewBag.Title = "Index"; }
+
+
+
+@using (Html.BeginForm("Index", "LoginEspecialista", FormMethod.Post))
+{
+<div class="text-left">
+    @Html.Label("Correo:")
+    @Html.TextBox("correo", null, new { @class = "form-control" })
+    <br />
+    @Html.Label("Contraseña:")
+    @Html.TextBox("contrasenia", null, new { @class = "form-control" })
+    <button type="submit" class="btn btn-secondary">Aceptar</button>
+</div>}
+

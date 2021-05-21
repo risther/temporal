@@ -1,0 +1,21 @@
+﻿@model SistemaCitasMedicas.Controllers.LoginAdministradorController
+@{ // Layout = null;
+    ViewBag.Title = "Index"; }
+
+
+
+@using (Html.BeginForm("Index", "LoginAdministrador", FormMethod.Post))
+{
+<div class="text-left">
+    @Html.Label("Correo:")
+    @Html.TextBox("correo", null, new { @class = "form-control" })
+    <br />
+    @Html.Label("Contraseña:")
+    @Html.TextBox("contrasenia", null, new { @class = "form-control" })
+    <button type="submit" class="btn btn-secondary">Aceptar</button>
+</div>}
+
+
+<h2 class="card-header">
+    <a href="~/LoginUsuario/AgregarEditar/" class="btn btn-info float-right"> Registrarse </a>
+</h2>
